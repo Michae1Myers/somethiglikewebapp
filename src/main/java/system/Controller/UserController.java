@@ -19,11 +19,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public @ResponseBody //responce что то даем клиенту на чего часть
-    List<User> getAllUsers() { //название метода можно задать какое угодно, ничего общего с getAllUsers UserService & UserDao нет
-        return userService.getAllUsers();// а возвращаем то, что возвращает userService
-    }
 
     @RequestMapping(value = "/validate", method = RequestMethod.GET)
     public ModelAndView validateUser() {

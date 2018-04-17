@@ -1,13 +1,20 @@
 package system.Model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "user_lp")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Column
     private String name;
+
+    @Column
     private String password;
 
-    @Override
-    public String toString() {
-        return "User (name " + name + ", password " + password +")";
-    }
 
     public User() {
     }
@@ -33,5 +40,10 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User (name " + name + ", password " + password + ")";
     }
 }

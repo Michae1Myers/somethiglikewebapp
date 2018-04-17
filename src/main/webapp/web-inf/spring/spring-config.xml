@@ -5,14 +5,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
-    <mvc:annotation-driven/>  <!--создает аннотации по иъ определению-->
+    <!--<mvc:annotation-driven/>  создает аннотации по иъ определению-->
 
     <context:component-scan base-package="system"/> <!--говорит спрингу, куда ему нужно идти и искать аннотации-->
 
-    <mvc:view-controller path="/" view-name="user_check_page"/> <!--куда обратится спринг если мы обратились localhost:port/.  Указывается имя jsp страницы. В данном случае мы говорим спрингу, что когда попадем на страницу перед выбором контроллера "localhost:port/" то мы хотим видеть user_check_page -->
+   <!-- <mvc:view-controller path="/" view-name="user_check_page"/> &lt;!&ndash;куда обратится спринг если мы обратились localhost:port/.  Указывается имя jsp страницы. В данном случае мы говорим спрингу, что когда попадем на страницу перед выбором контроллера "localhost:port/" то мы хотим видеть user_check_page &ndash;&gt;
 
-    <bean id="resolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"> <!--этот бин говорит откуда какие страницы тянуть. Можем указать путь, где он (бин) будет искать страницы. Ищет он по свойству префикс суффикс в данном случае -->
+    <bean id="resolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"> &lt;!&ndash;этот бин говорит откуда какие страницы тянуть. Можем указать путь, где он (бин) будет искать страницы. Ищет он по свойству префикс суффикс в данном случае &ndash;&gt;
         <property name="prefix" value="/web-inf/pages/"/>
         <property name="suffix" value=".jsp"/>
-    </bean>
+    </bean>-->
 </beans>
