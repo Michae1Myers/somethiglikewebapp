@@ -1,6 +1,6 @@
-package system.Dao;
+package system.dao;
 
-import system.Model.User;
+import system.model.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;

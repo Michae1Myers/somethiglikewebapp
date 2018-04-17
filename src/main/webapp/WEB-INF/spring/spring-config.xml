@@ -9,10 +9,10 @@
 
     <context:component-scan base-package="system"/> <!--говорит спрингу, куда ему нужно идти и искать аннотации-->
 
-    <mvc:view-controller path="/" view-name="user_check_page"/> <!--куда обратится спринг если мы обратились localhost:port/.  Указывается имя jsp страницы. В данном случае мы говорим спрингу, что когда попадем на страницу перед выбором контроллера "localhost:port/" то мы хотим видеть user_check_page -->
-
+    <mvc:view-controller path="/" view-name="homepage"/> <!--куда обратится спринг если мы обратились localhost:port/.  Указывается имя jsp страницы. В данном случае мы говорим спрингу, что когда попадем на страницу перед выбором контроллера "localhost:port/" то мы хотим видеть user_check_page -->
+    <mvc:resources mapping="/resources/**"  location="/resources/" /><!--для файлов css, конфигурационных файлов и ресурсов-->
     <bean id="resolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"> <!--этот бин говорит откуда какие страницы тянуть. Можем указать путь, где он (бин) будет искать страницы. Ищет он по свойству префикс суффикс в данном случае -->
-        <property name="prefix" value="/web-inf/pages/"/>
+        <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 </beans>
