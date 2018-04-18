@@ -73,25 +73,4 @@
     </dependencies>
 
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>${server-version}</version>
-
-                <configuration>
-                    <scanIntervalSeconds>5</scanIntervalSeconds>
-                    <httpConnector>
-                        <port>1234</port>
-                    </httpConnector>
-                    <webApp>
-                        <contextPath>/ <!--тесно связан с -->
-                        </contextPath> <!-- /user-system это наш контекст к которому стучится сервер, читает ли он имя варника?-->
-                    </webApp>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
